@@ -1,4 +1,5 @@
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
+const { type } = require("os");
 
 const adminschema = mongoose.Schema({
     
@@ -9,6 +10,9 @@ const adminschema = mongoose.Schema({
         type:String
     },
     password: {
+        type:String
+    },
+    birthdate: {
         type:String
     },
     city: {

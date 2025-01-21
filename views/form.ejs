@@ -1,96 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form 2</title>
+    <title>Form</title>
     <style>
-        #abc {
-            background-color: #e400ff;
-            font-size: 13px;
-            padding: 10px 15px;
-        }
-    </style>
-    <style>
-        #xyz {
-            background-color: blue;
-            font-size: 13px;
-            padding: 10px 20px;
-        }
-    </style>
-    <style>
-        span{
-            color: aliceblue;
-        }
+
     </style>
 </head>
+
 <body>
+
     <h1 align="center">
         <u>Project Management</u>
     </h1>
-    <form action="/adddata" method="post">
-        <table border="0" cellpadding="15" cellspacing="0" align="center" bgcolor="skyblue">
-            <tr>
-                <th align="left">
-                    <label for="name">Project Name</label>
-                </th>
-                <td>
-                    <input type="text" class="name" placeholder="Project Name" name="useername" />
-                </td>
-            </tr>
-            <tr>
-                <th align="left">
-                    <label for="">Gender</label>
-                </th>
-                <td>
-                    <select>
-                        <option selected>_Select Gender_</option>
-                        <option>Male</option>
-                        <option>Female</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <th align="left">
-                    <label for="date">Start Date</label>
-                </th>
-                <td>
-                    <input type="date" for="date" placeholder="dd-mm-yyyy">
-                </td>
-            </tr>
-            <tr>
-                <th align="left">
-                    <label for="date2">End Date</label>
-                </th>
-                <td>
-                    <input type="date" for="date2" placeholder="dd-mm-yyyy">
-                </td>
-            </tr>
-            <tr>
-                <th align="left">
-                    <label for="">Priority</label>
-                </th>
-                <td>
-                    <input type="radio" name="abc" />High
-                    <input type="radio" name="abc" />Average
-                    <input type="radio" name="abc" />Low
-                </td>
-            </tr>
-            <tr>
-                <th align="left">
-                    <label for="">Description</label>
-                </th>
-                <td>
-                    <textarea></textarea>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2" align="center">
-                    <button id="abc"><span>Submit</span></button>
-                    <button id="xyz"><span>clear</span></button>
-                </td>
-            </tr>
-        </table>
+
+    <form action="/adddata" method="post" align="center" color="skyblue">
+
+        <label for="name">User Name</label>
+        <input type="text" class="name" placeholder="Project Name" name="useername" />
+        <br>
+
+        <label for="email">Email</label>
+        <input type="text" class="email" placeholder="Email" name="email" />
+        <br>
+
+        <label for="password">Password</label>
+        <input type="password" class="password" placeholder="Password" name="password" />
+        <br>
+
+        <label for="birthdate">Birth Date</label>
+        <input type="date" for="birthdate" placeholder="dd-mm-yyyy" name="birthdate">
+        <br>
+
+        <label for="city">City</label>
+        <input type="text" for="text" placeholder="City" name="city">
+        <br>
+
+        <label for="">Gender</label>
+        <select>
+            <option selected>_Select Gender_</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+        </select>
+        <br>
+
+        <label for="hobby">Hobby</label>
+        <input type="radio" name="hobby">
+        Reading
+        <br>
+        <input type="radio" name="hobby">
+        Dancing
+        <br>
+        <input type="radio" name="hobby">
+        Painting
+        <br>
+        <input type="radio" name="hobby">
+        Music
+        <br>
+
+        <button class="btn">
+            <span>Submit</span>
+        </button>
+        <button class="btn">
+            <span>clear</span>
+        </button>
+
     </form>
+
 </body>
+
 </html>
