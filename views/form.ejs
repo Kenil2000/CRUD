@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 2</title>
+    <style>
+        #abc {
+            background-color: #e400ff;
+            font-size: 13px;
+            padding: 10px 15px;
+        }
+    </style>
+    <style>
+        #xyz {
+            background-color: blue;
+            font-size: 13px;
+            padding: 10px 20px;
+        }
+    </style>
+    <style>
+        span{
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1 align="center">
+        <u>Project Management</u>
+    </h1>
+    <form action="/adddata" method="post">
+        <table border="0" cellpadding="15" cellspacing="0" align="center" bgcolor="skyblue">
+            <tr>
+                <th align="left">
+                    <label for="name">Project Name</label>
+                </th>
+                <td>
+                    <input type="text" class="name" placeholder="Project Name" name="useername" />
+                </td>
+            </tr>
+            <tr>
+                <th align="left">
+                    <label for="">Gender</label>
+                </th>
+                <td>
+                    <select>
+                        <option selected>_Select Gender_</option>
+                        <option>Male</option>
+                        <option>Female</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th align="left">
+                    <label for="date">Start Date</label>
+                </th>
+                <td>
+                    <input type="date" for="date" placeholder="dd-mm-yyyy">
+                </td>
+            </tr>
+            <tr>
+                <th align="left">
+                    <label for="date2">End Date</label>
+                </th>
+                <td>
+                    <input type="date" for="date2" placeholder="dd-mm-yyyy">
+                </td>
+            </tr>
+            <tr>
+                <th align="left">
+                    <label for="">Priority</label>
+                </th>
+                <td>
+                    <input type="radio" name="abc" />High
+                    <input type="radio" name="abc" />Average
+                    <input type="radio" name="abc" />Low
+                </td>
+            </tr>
+            <tr>
+                <th align="left">
+                    <label for="">Description</label>
+                </th>
+                <td>
+                    <textarea></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button id="abc"><span>Submit</span></button>
+                    <button id="xyz"><span>clear</span></button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
