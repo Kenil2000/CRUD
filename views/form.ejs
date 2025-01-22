@@ -12,63 +12,67 @@
 
 <body>
 
-    <h1 align="center">
-        <u>Project Management</u>
-    </h1>
+    <div class="form-title">
+        <h1 align="center">
+            <u>Project Management</u>
+        </h1>
+    </div>
 
-    <form action="/adddata" method="post" align="center" color="skyblue">
+    <div class="form">
+        <form action="/adddata" method="post" align="center" color="skyblue">
 
-        <label for="name">User Name</label>
-        <input type="text" class="name" placeholder="Project Name" name="useername" />
-        <br>
+            <label for="name">User Name</label>
+            <input type="text" class="name" placeholder="Project Name" name="useername" />
+            <br>
 
-        <label for="email">Email</label>
-        <input type="text" class="email" placeholder="Email" name="email" />
-        <br>
+            <label for="email">Email</label>
+            <input type="text" class="email" placeholder="Email" name="email" required />
+            <br>
 
-        <label for="password">Password</label>
-        <input type="password" class="password" placeholder="Password" name="password" />
-        <br>
+            <label for="password">Password</label>
+            <input type="password" class="password" placeholder="Password" name="password" required />
+            <br>
 
-        <label for="birthdate">Birth Date</label>
-        <input type="date" for="birthdate" placeholder="dd-mm-yyyy" name="birthdate">
-        <br>
+            <label for="birthdate">Birth Date</label>
+            <input type="date" for="birthdate" placeholder="dd-mm-yyyy" name="birthdate">
+            <br>
 
-        <label for="city">City</label>
-        <input type="text" for="text" placeholder="City" name="city">
-        <br>
+            <label for="city">City</label>
+            <input type="text" for="text" placeholder="City" name="city">
+            <br>
 
-        <label for="">Gender</label>
-        <select>
-            <option selected>_Select Gender_</option>
-            <option>Male</option>
-            <option>Female</option>
-            <option>Other</option>
-        </select>
-        <br>
+            <label for="">Gender</label>
+            <select>
+                <option selected>_Select Gender_</option>
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+            </select>
+            <br>
 
-        <label for="hobby">Hobby</label>
-        <input type="radio" name="hobby">
-        Reading
-        <br>
-        <input type="radio" name="hobby">
-        Dancing
-        <br>
-        <input type="radio" name="hobby">
-        Painting
-        <br>
-        <input type="radio" name="hobby">
-        Music
-        <br>
+            <label for="hobby">Hobby</label>
+            <input type="checkbox" value="Reading" name="hobby" >
+            Reading
+            <br>
+            <input type="checkbox" value="Dancing" name="hobby">
+            Dancing
+            <br>
+            <input type="checkbox" value="Painting" name="hobby">
+            Painting
+            <br>
+            <input type="checkbox" value="Music" name="hobby">
+            Music
+            <br>
 
-        <button class="btn">
-            <span>Submit</span>
-        </button>
-        <button class="btn">
-            <span>clear</span>
-        </button>
+            <button class="btn">
+                <span>Submit</span>
+            </button>
+            <button class="btn">
+                <span>clear</span>
+            </button>
 
-    </form>
+        </form>
+    </div>
 
 </body>
 
