@@ -6,9 +6,24 @@ module.exports.form = async (req, res) => {
 module.exports.adddata = async (req, res) => {
     try {
         const admindata = await Admin.create(req.body)
-        return res.redirect("back")
+        // console.log(admindata)
+        return res.redirect('/viewdata')
     }
     catch (error) {
         console.log(error);
+    }
+}
+
+module.exports.viewdata = async (req, res) => {
+    try {
+        const adminData = await Admin.find({});
+        // console.log(adminData)
+        return res.render('viewdata', {
+            adminData: adminData
+        })
+
+    } catch (error) {
+        console.log(error);
+        return res.redirect("back");
     }
 }

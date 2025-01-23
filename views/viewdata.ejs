@@ -1,0 +1,29 @@
+<h1>VieewDataPage</h1>
+
+<table border="1" celllpadding="5">
+    <% for (var ad of adminData){ %>
+        <tr>
+            <td>
+                <%= ad.username %>
+            </td>
+            <td>
+                <%= ad.email %>
+            </td>
+            <td>
+                <%= ad.password %>
+            </td>
+            <td>
+                <%= ad.birthdate %>
+            </td>
+            <td>
+                <%= ad.city %>
+            </td>
+            <td>
+                <%= ad.hobby %>
+            </td>
+            <td>
+                <%= ad.gender %>
+            </td>
+        </tr>
+        <% }%>
+</table>
