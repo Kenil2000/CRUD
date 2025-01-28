@@ -1,6 +1,6 @@
 <h1>VieewDataPage</h1>
 
-<table border="1" celllpadding="5">
+<table border="1" cellpadding="5">
     <% for (var ad of adminData){ %>
         <tr>
             <td>
@@ -23,6 +23,13 @@
             </td>
             <td>
                 <%= ad.gender %>
+            </td>
+            <td>
+                <%= ad.createdAt %>
+            </td>
+            <td>
+                <a href="/delete/<%= ad._id %>">Delete</a> || 
+                <a href="/Update/<%= ad._id %>">Update</a>  
             </td>
         </tr>
         <% }%>

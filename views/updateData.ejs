@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <div class="form-title">
+        <h1 align="center">
+            <u>Project Management</u>
+        </h1>
+    </div>
+
+    <div class="form">
+
+        <form action="/editData" method="post" align="center" color="skyblue">
+            <input type="hidden" value="<%= oldadminData.id %>" name="EditID">
+            <label for="name">User Name</label>
+            <input type="text" class="username" placeholder="Project Name" name="username"
+                value="<%= oldadminData.username %>" />
+            <br>
+
+            <label for="email">Email</label>
+            <input type="text" class="email" placeholder="Email" name="email" value="<%= oldadminData.email %>"
+                required />
+            <br>
+
+            <label for="password">Password</label>
+            <input type="password" class="password" placeholder="Password" name="password"
+                value="<%= oldadminData.password %>" required />
+            <br>
+
+            <label for="birthdate">Birth Date</label>
+            <input type="date" for="birthdate" placeholder="dd-mm-yyyy" name="birthdate"
+                value="<%= oldadminData.birthdate %>">
+            <br>
+
+            <label for="city">City</label>
+            <input type="text" for="text" placeholder="City" name="city" value="<%= oldadminData.city %>">
+            <br>
+
+            <label for="gender">Gender :</label>
+            <select name="gender" required>
+                <option selected value="">_Select Gender_</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            <br>
+
+            <label for="hobby">Hobby</label>
+            <input type="checkbox" name="hobby" value="Reading" <% if(oldadminData.hobby.includes('Reading')){%>
+            <%= 'checked' %>
+                <% } %>>Reading
+                    <input type="checkbox" name="hobby" value="Dancing" <% if(oldadminData.hobby.includes('Dancing')){%>
+                    <%= 'checked' %>
+                        <% } %>>Dancing
+                            <input type="checkbox" name="hobby" value="Painting" <%
+                                if(oldadminData.hobby.includes('Painting')){%>
+                            <%= 'checked' %>
+                                   <%} %>>Painting
+                                    <input type="checkbox" name="hobby" value="music" <%
+                                        if(oldadminData.hobby.includes('Music')){%>
+                                    <%= 'checked' %>
+                                           <%} %>>Music
+
+                                            <br>
+                                            <button class="btn">
+                                                <span>Update</span>
+                                            </button>
+
+
+        </form>
+        <a href="/viewdata">View data</a>
+    </div>
+
+
+</body>
+
+</html>
