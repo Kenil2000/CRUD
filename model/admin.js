@@ -25,8 +25,9 @@ const adminschema = mongoose.Schema(
             type: Array
         },
     },
-    { timestamps: true },
+    { timestamps: true },// to add timestamp add (created_at , Updated_at)
 );
 
-const Admin = mongoose.model('Admin', adminschema)
+const Admin = mongoose.model('Admin', adminschema);
+
 module.exports = Admin;

@@ -1,10 +1,9 @@
 const express = require('express')
 const app = express()
 const path = require("path");
-const db = require('./config/mongoose');
+const db = require('./config/mongoose'); //to Set path OF mongoose file
 
-const mongoose = require('mongoose')
-app.use(express.urlencoded())
+app.use(express.urlencoded())// to decode POST request (Compulsory for POST Request)
 
 
 app.set("view engine", 'ejs'); //To attch Ejs view Engine

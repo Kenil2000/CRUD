@@ -2,7 +2,6 @@ const mongoose = require("mongoose");
 
 mongoose.connect('mongodb://localhost:27017/admin')
 
-
 const db = mongoose.connection;
 
 db.once('open',function(err){

@@ -41,14 +41,15 @@ module.exports.deleteData = async (req, res) => {
     }
 }
 
+// to open editdata page 
 module.exports.updateData = async (req, res) => {
     const adminData = await Admin.findById(req.params.id)
-    // console.log(adminData)
     return res.render("updateData", {
         oldadminData: adminData
     })
 }
 
+// to update new data 
 module.exports.editData = async (req, res) => {
     try {
         const newData = await Admin.findByIdAndUpdate(req.body.EditID, req.body);
@@ -58,4 +59,38 @@ module.exports.editData = async (req, res) => {
         console.log(err)
     }
 
+}
+
+module.exports.forgetpassword = async (req, res) => {
+    return res.render("forgetpass");
+}
+
+module.exports.checkpassword = async (req, res) => {
+    try {
+        console.log(req.body)
+        const adminData = await Admin.findOne({ email: req.body.email })
+        if (adminData) {
+            if (adminData.password === req.body.oldpassword) {
+                console.log(adminData);
+                console.log("email Matched")
+                return res.render("confirmpass");
+            }
+        } else {
+            console.log("email Not Found")
+            return res.redirect('back')
+        }
+    } catch (error) {
+        console.log(error)
+        return res.redirect("back");
+    }
+}
+
+module.exports.newpassword = async (req, res) => {
+    try {
+       
+    }
+    catch (error) {
+        console.log(error);
+        return res.redirect('back');
+    }
 }
